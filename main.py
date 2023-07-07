@@ -58,6 +58,7 @@ async def add_income(update: Update, context: CallbackContext):
     if len(adds_parts) == 2:
         sqlite_m.insert_table(user_id, "Приход", adds_parts[0], int(adds_parts[1]))
         await update.message.reply_text(f"Record was successfully added!")
+        update_users_balance()
     else:
         await update.message.reply_text(f"Record invalid format!")
 
