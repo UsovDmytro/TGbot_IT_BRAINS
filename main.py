@@ -3,7 +3,7 @@ from telegram import Update, ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKe
 from telegram.ext import ApplicationBuilder, CallbackContext, CommandHandler, MessageHandler, filters, CallbackQueryHandler
 
 import sqlite_m
-from information_data1 import TOKEN_BOT
+from information_data import TOKEN_BOT
 
 category_spending = [
     'Одежда',
