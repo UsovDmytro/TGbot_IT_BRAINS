@@ -121,7 +121,7 @@ async def handle_callback_query(update: Update, context: CallbackContext) -> Non
 
 def update_users_balance():
     global users_balance
-    users_balance = {key: int(value) for key, value in sqlite_m.get_balance()}
+    users_balance = {key: int(value) for key, value in sqlite_m.get_balance() if not (value is None)}
 
 
 def run():
