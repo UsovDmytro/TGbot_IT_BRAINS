@@ -4,6 +4,11 @@ import sys
 import traceback
 import logging
 
+logging.basicConfig(
+                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                    level=logging.INFO
+)
+
 
 def connection_db(sqlite_insert_query: str, text_done: str, read: bool):
     try:

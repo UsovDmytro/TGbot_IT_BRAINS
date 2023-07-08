@@ -7,6 +7,10 @@ from information_data import TOKEN_BOT, category_spending
 
 users_balance = {}
 
+logging.basicConfig(
+                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                    level=logging.INFO
+)
 
 def create_keyboard():
     keyboard = ReplyKeyboardMarkup(keyboard=[['Список категорий'], ['Записи расходов и доходов'],
